@@ -57,7 +57,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision :shell do |s|
     s.path = "packages.sh"
-    s.args = "apache2 vim build-essential curl git mysql-client-core-5.5 sqlite3 libsqlite3-dev"
+    s.args = "apache2 vim build-essential curl git mysql-client-core-5.5 sqlite3 libsqlite3-dev nodejs"
   end
 
   config.vm.provision :shell, :path => "bootstrap.sh"
