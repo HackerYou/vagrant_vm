@@ -7,7 +7,7 @@ if [ ! $VAGRANT_INITIALIZED ]; then
   ln -fs /vagrant /var/www
   ln -fs /vagrant /home/vagrant/hacker_you
 
-  export "set completion-ignore-case on" >> /etc/inputrc
+  echo "set completion-ignore-case on" >> /etc/inputrc
 
   echo "export LC_CTYPE=en_US.UTF-8" >> /home/vagrant/.profile
   echo "export LANG=en_US.UTF-8" >> /home/vagrant/.profile
