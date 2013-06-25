@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640" />
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>HackerYou Rails VM by HackerYou</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/HackerYou/vagrant_vm">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>HackerYou Rails VM</h1>
+            <h2>Setting up your virtual machine!</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/HackerYou/vagrant_vm/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/HackerYou/vagrant_vm/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h3>
+<a name="welcome-to-the-hackeryou-summer-academy" class="anchor" href="#welcome-to-the-hackeryou-summer-academy"><span class="octicon octicon-link"></span></a>Welcome to the HackerYou Summer Academy!</h3>
+
+<p>In order to ensure everyone has the right command line tools and programs, we'll all be developing on a Virtual Machine, or VM. The VM is custom to the HackerYou environment and includes Ruby 2.0, Rails 4.0, git, mysql, and some other nice things. You're going to use a tool called Vagrant to run your VM invisibly inside your main operating system. This means you can use your operating system's native programs (like a text editor and web browser) to work on things, but they'll all be run from a command line that is secretly UNIX.</p>
+
+<p>That's a lot of words. Don't worry, it's super simple to set up:</p>
+
+<h3>
+<a name="1-install-virtualbox" class="anchor" href="#1-install-virtualbox"><span class="octicon octicon-link"></span></a>1. Install VirtualBox</h3>
+
+<p>VirtualBox is the actual software that will invisibly run our virtual machines. Simply download it and run the installer.</p>
+
+<ul>
+<li>Windows: <a href="http://download.virtualbox.org/virtualbox/4.2.14/VirtualBox-4.2.14-86644-Win.exe">download</a>
+</li>
+<li>Mac: <a href="http://download.virtualbox.org/virtualbox/4.2.10/VirtualBox-4.2.10-84104-OSX.dmg">download</a>
+</li>
+</ul><h3>
+<a name="2-install-vagrant" class="anchor" href="#2-install-vagrant"><span class="octicon octicon-link"></span></a>2. Install Vagrant</h3>
+
+<p>Vagrant is the software that manages your virtual machine on your local computer, and makes it easy to run commands in the VM. It's also super simple to set up; just download it and, again, run the installer.</p>
+
+<p><a href="http://downloads.vagrantup.com/tags/v1.2.2">Download</a></p>
+
+<h3>
+<a name="3-download-the-hackeryou-vagrantfile" class="anchor" href="#3-download-the-hackeryou-vagrantfile"><span class="octicon octicon-link"></span></a>3. Download the HackerYou Vagrantfile</h3>
+
+<p>The Vagrantfile is something we've configured with all of the software you'll need in the VM. </p>
+
+<ul>
+<li>Click the giant <strong>Download .ZIP</strong> button at the top of the page.</li>
+<li>Unzip the downloaded file on your computer.
+
+<ul>
+<li>Windows: Double click the file, and press the <strong>Extract All</strong> toolbar button.</li>
+<li>Mac: Will either happen automatically, or just double click the file.</li>
+</ul>
+</li>
+<li>Rename the newly created and unzipped directory to <code>hacker_you</code>. This will become your main working directory where you'll keep all of your projects!</li>
+<li>Move the new <code>hacker_you</code> directory into your home folder, so it's easy to get to.
+
+<ul>
+<li>Windows: <code>C:/Users/ME</code>
+</li>
+<li>Mac: The default folder that opens when you open a Finder window, aka <code>/Users/ME</code>.</li>
+</ul>
+</li>
+</ul><h3>
+<a name="4-run-vagrant-up" class="anchor" href="#4-run-vagrant-up"><span class="octicon octicon-link"></span></a>4. Run <code>vagrant up</code>
+</h3>
+
+<ul>
+<li>Open a command prompt.
+
+<ul>
+<li>Windows: Press <strong>Start</strong>, type <code>cmd</code>, and then press Enter.</li>
+<li>Mac: Open <strong>Applications/Utilities/Terminal</strong>
+</li>
+</ul>
+</li>
+<li>Type <code>cd hacker_you</code> and press Enter. (You'll understand what this does in just a minute!)</li>
+<li>Type <code>vagrant up</code>.</li>
+</ul><p>This could take quite a while, so while it's working, you should get started watching <a href="https://peepcode.com/products/meet-the-command-line">Intro to Command Line</a>!</p>
+
+<h3>
+<a name="5-jump-into-your-new-vm" class="anchor" href="#5-jump-into-your-new-vm"><span class="octicon octicon-link"></span></a>5. Jump into your new VM!</h3>
+
+<p>Your virtual machine is now running invisibly in the background. Whenever you want to start working with it (for example, to follow along with the video above or to start working on a project), you'll want to follow very similar steps:</p>
+
+<ul>
+<li>Open a command prompt.</li>
+<li>Type <code>cd hacker_you</code> and press Enter.</li>
+<li>Type <code>vagrant ssh</code>.</li>
+</ul><p>After you type <code>vagrant ssh</code>, you'll see that the command prompt changes to signify that you're running inside the Vagrant VM. You can now safely practice all of the commands you're learning in the screencast or type <code>rails new my_app</code> to start a new Rails app!</p>
+
+<h3>
+<a name="what-now" class="anchor" href="#what-now"><span class="octicon octicon-link"></span></a>What now?</h3>
+
+<p>Finish up with the video, and start playing around in your new VM. If you're feeling a bit lost about the command line, don't worry, we'll review it a little bit in class. If you have trouble getting the VM working, don't hesitate to ask a mentor!</p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/HackerYou">HackerYou</a> can be found on <a href="https://github.com/HackerYou/vagrant_vm">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
