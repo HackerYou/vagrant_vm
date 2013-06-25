@@ -116,18 +116,46 @@
 <h3>
 <a name="5-jump-into-your-new-vm" class="anchor" href="#5-jump-into-your-new-vm"><span class="octicon octicon-link"></span></a>5. Jump into your new VM!</h3>
 
-<p>Your virtual machine is now running invisibly in the background. Whenever you want to start working with it (for example, to follow along with the video above or to start working on a project), you'll want to follow very similar steps:</p>
+<p>Your virtual machine is now running invisibly in the background. Let's jump into it and start doing some cool stuff!</p>
 
 <ul>
-<li>Open a command prompt.</li>
-<li>Type <code>cd hacker_you</code> and press Enter.</li>
-<li>Type <code>vagrant ssh</code>.</li>
-</ul><p>After you type <code>vagrant ssh</code>, you'll see that the command prompt changes to signify that you're running inside the Vagrant VM. You can now safely practice all of the commands you're learning in the screencast or type <code>rails new my_app</code> to start a new Rails app!</p>
+  <li>Type <code>vagrant ssh</code> and press Enter. You'll see that the command prompt changes to signify you are inside of the Vagrant VM.</li>
+  <li>Type <code>cd hacker_you</code> and press Enter.</li>
+  <li>Type <code>rails new my_first_project</code> and press Enter.</li>
+</ul>
+
+<p>Rails will now create a new, empty project in the <code>hacker_you</code> directory, which is now shared between your main operating system and the virtual machine. You can use your native text editor to open <code>ME/hacker_you/my_first_project</code> and edit them. Changes you save will also be reflected in the virtual machine.</p>
+
+<p>Now let's verify that Rails is working properly.</p>
+
+<ul>
+  <li>Type <code>cd my_first_project</code> and press Enter.</li>
+  <li>Type <code>rails server</code> and press Enter.</li>
+</ul>
+
+<p>You can now use your native operating system's web browser to navigate to <code>http://localhost:3000</code>. If everything's working correctly, you should see a "Welcome to Rails" page!</p>
 
 <h3>
 <a name="what-now" class="anchor" href="#what-now"><span class="octicon octicon-link"></span></a>What now?</h3>
 
 <p>Finish up with the video, and start playing around in your new VM. If you're feeling a bit lost about the command line, don't worry, we'll review it a little bit in class. If you have trouble getting the VM working, don't hesitate to ask a mentor!</p>
+
+<p>If you close the terminal or open a new tab and need to get back into your VM, you can use the same steps:</p>
+
+<ul>
+<li>Open a command prompt.</li>
+<li>Type <code>cd hacker_you</code>.</li>
+<li>Type <code>vagrant ssh</code>.</li>
+</ul>
+
+<p>If the virtual machine is no longer running (for example if you restart your real machine), you can start it again using the same steps:</p>
+
+<ul>
+<li>Open a command prompt.</li>
+<li>Type <code>cd hacker_you</code>.</li>
+<li>Type <code>vagrant up</code>.</li>
+<li>Type <code>vagrant ssh</code>.</li>
+</ul>
       </section>
 
       <footer>
