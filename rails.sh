@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
 
-if [ $(rbenv global) != "2.0.0-p195" ]; then
+if [ $(rbenv global) != "2.0.0-p247" ]; then
   echo "====================== INSTALLING RUBY ======================"
 
-  rbenv install 2.0.0-p195
-  rbenv global 2.0.0-p195
+  cd ~/.rbenv/plugins/ruby-build
+  git pull
+  cd ~
+
+  rbenv install 2.0.0-p247
+  rbenv global 2.0.0-p247
 fi;
 
 if ! which rails; then
