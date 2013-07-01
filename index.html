@@ -58,7 +58,7 @@
 <p>VirtualBox is the actual software that will invisibly run our virtual machines. Simply download it and run the installer.</p>
 
 <ul>
-<li>Windows: <a href="http://download.virtualbox.org/virtualbox/4.2.14/VirtualBox-4.2.14-86644-Win.exe">download</a>
+<li>Windows: <a href="http://download.virtualbox.org/virtualbox/4.2.10/VirtualBox-4.2.10-84105-Win.exe">download</a>
 </li>
 <li>Mac: <a href="http://download.virtualbox.org/virtualbox/4.2.10/VirtualBox-4.2.10-84104-OSX.dmg">download</a>
 </li>
@@ -112,15 +112,30 @@
 </li>
 <li>Type <code>cd hacker_you</code> and press Enter. (You'll understand what this does in just a minute!)</li>
 <li>Type <code>vagrant up</code>.</li>
-</ul><p>This could take quite a while, so while it's working, you should get started watching <a href="https://peepcode.com/products/meet-the-command-line">Intro to Command Line</a>!</p>
+</ul><p>This could take quite a while, so while it's working, you should get started watching Intro to Command Line! Once it's done, proceed to step 5.</p>
 
 <h3>
 <a name="5-jump-into-your-new-vm" class="anchor" href="#5-jump-into-your-new-vm"><span class="octicon octicon-link"></span></a>5. Jump into your new VM!</h3>
 
 <p>Your virtual machine is now running invisibly in the background. Let's jump into it and start doing some cool stuff!</p>
 
+<h4>Mac:</h4>
 <ul>
   <li>Type <code>vagrant ssh</code> and press Enter. You'll see that the command prompt changes to signify you are inside of the Vagrant VM.</li>
+</ul>
+
+<h4>Windows:</h4>
+<ul>
+  <li>Download and install <a href="http://the.earth.li/~sgtatham/putty/latest/x86/putty-0.62-installer.exe">PuTTY</a>.</li>
+  <li>Double click the <code>putty.reg</code> file in the <code>HackerYou</code> directory. Confirm the registry changes.</li>
+  <li>Open PuTTY from your Desktop or the start menu.</li>
+  <li>Select the <code>Vagrant</code> session in the sessions list and press the <strong>Load</strong> button.</li>
+  <li>Press the <strong>Load</strong> button and a command prompt will appear. You are now running inside the Vagrant VM!</li>
+  <li>If you are prompted for a password, enter <code>vagrant</code>. Note: password characters do not appear as you type them into a command line.</li>
+</ul>
+
+<h3><a name="6-start-a-rails-project" class="anchor" href="#6-start-a-rails-project"><span class="octicon octicon-link"></span></a>6. Start a Rails project.</h3>
+<ul>
   <li>Type <code>cd hacker_you</code> and press Enter.</li>
   <li>Type <code>rails new my_first_project</code> and press Enter.</li>
 </ul>
@@ -173,6 +188,6 @@
 
     </div>
 
-    
+
   </body>
 </html>
